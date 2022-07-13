@@ -50,7 +50,9 @@
               <h1 class="card-title" *ngIf="!canEditCode">
                 {{ UserFullName }}
               </h1>
-              <a href="https://www.codewars.com/users/iDalux"
+              <a
+                *ngIf="!canEditCode"
+                href="https://www.codewars.com/users/iDalux"
                 ><img
                   src="https://www.codewars.com/users/iDalux/badges/micro"
                   alt=""
