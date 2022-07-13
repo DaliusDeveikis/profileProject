@@ -1,0 +1,13 @@
+* {
+  font-family: 'Cormorant SC', serif;
+}
+
+.myBorderFancy {
+  border-radius: 61% 39% 28% 72% / 67% 6% 94% 33% ;
+  border: 1px solid #6d6875
+}
+
+
+li {
+	list-style: none;
+}

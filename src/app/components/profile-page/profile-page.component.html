@@ -1,1 +1,151 @@
-<h1>Hello world!</h1>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap");
+</style>
+
+<div class="container px-4 mt-5">
+  <div class="row gx-5">
+    <div class="col">
+      <div class="p-3 text-center">+37068855069</div>
+    </div>
+    <div class="col">
+      <div class="p-3 text-center">slkyper@gmail.com</div>
+    </div>
+    <div class="col">
+      <div class="p-3 text-center">facebook</div>
+    </div>
+  </div>
+  <hr />
+
+  <ul>
+    <!-- ABOUT ME. -->
+    <li>
+      <div class="card mb-3 border-0">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card-body">
+              <small
+                *ngIf="!canEditCode"
+                class="pull-right text-success m-1"
+                (click)="canEditCode = true"
+                >Edit</small
+              >
+              <small
+                *ngIf="canEditCode"
+                class="pull-right text-danger"
+                (click)="canEditCode = false"
+                >Close</small
+              >
+              <h1 class="card-title" *ngIf="!canEditCode">
+                {{ UserFullName }}
+              </h1>
+
+              <input
+                *ngIf="canEditCode"
+                [(ngModel)]="UserFullName"
+                type="text"
+                class="form-control"
+              />
+              <p class="card-text">
+                <small class="text-muted" *ngIf="!canEditCode">{{
+                  UserInfo
+                }}</small>
+              </p>
+              <input
+                *ngIf="canEditCode"
+                [(ngModel)]="UserInfo"
+                type="text"
+                class="form-control"
+              />
+              <p class="card-text" *ngIf="!canEditCode">
+                {{ UserAbout }}
+              </p>
+              <textarea
+                *ngIf="canEditCode"
+                [(ngModel)]="UserAbout"
+                class="form-control mt-3"
+                rows="4"
+              >
+              </textarea>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <img
+              src="https://scontent.fplq1-1.fna.fbcdn.net/v/t1.6435-9/131353298_1440142066181098_5050288255966457944_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ksyn6x-2iZAAX_i7aOH&_nc_ht=scontent.fplq1-1.fna&oh=00_AT84NAFLzt143uZifzTWTz30TbJob0TYAx8H6MrgSW7FFg&oe=62F4AED7"
+              class="img-fluid myBorderFancy opacity-75"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+    <!-- end about me. -->
+
+    <!-- EXPERIENCE. -->
+    <li>
+      <div class="card mb-3 border-0">
+        <h4 class="card-title">Experience:</h4>
+        <!-- CARD GROUP -->
+        <div class="card-group">
+          <div class="card m-2 border-0">
+            <div class="card-body">
+              <h5 class="card-title">KidsSummerCampApp</h5>
+              <p class="card-text">Work was done together with the teacher.</p>
+            </div>
+            <a
+              href="https://github.com/DaliusDeveikis/KidsSummerCampApp"
+              class="btn btn-primary float-start"
+              >Github</a
+            >
+          </div>
+
+          <div class="card m-2 border-0">
+            <div class="card-body">
+              <h5 class="card-title">ReceptuKnyga</h5>
+              <p class="card-text">Work was done together with the teacher.</p>
+            </div>
+
+            <a
+              href="https://github.com/DaliusDeveikis/ReceptuKnyga"
+              class="btn btn-primary float-start"
+              >Github</a
+            >
+          </div>
+
+          <div class="card m-2 border-0">
+            <div class="card-body">
+              <h5 class="card-title">QuizBot</h5>
+              <p class="card-text">
+                App were developed in the Python programming language. Together
+                with a colleague from the group.
+              </p>
+            </div>
+            <a
+              href="https://gitlab.com/PythonLT2/quizbot"
+              class="btn btn-primary float-start"
+              >Gitlab</a
+            >
+          </div>
+          <div class="card m-2 border-0">
+            <div class="card-body">
+              <h5 class="card-title">Expense Management</h5>
+              <p class="card-text">
+                I received an assignment from my employer. I did it myself..
+              </p>
+            </div>
+            <a
+              href="https://gitlab.com/slkyper/expense_management"
+              class="btn btn-primary float-start"
+              >Gitlab</a
+            >
+          </div>
+        </div>
+      </div>
+    </li>
+    <!-- End Experience. -->
+    <li>
+      <div class="card mb-3 border-0">
+        <h4 class="card-title">Education:</h4>
+      </div>
+    </li>
+  </ul>
+</div>
